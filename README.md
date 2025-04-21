@@ -60,3 +60,12 @@ which python
 
 
 ```
+
+# デプロイ
+- Streamlit では、poetry install --no-root を指定できない
+- requeirements.txt を作成して、デプロイする
+```bash
+poetry self add poetry-plugin-export
+
+poetry export -f requirements.txt --without-hashes -o requirements.txt
+```
